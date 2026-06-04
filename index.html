@@ -288,6 +288,17 @@
             font-size: 1.05rem;
         }
 
+        /* Added interactive styling for contact links */
+        .contact a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact a:hover {
+            color: var(--accent);
+        }
+
         .contact strong {
             color: #93c5fd;
             margin-right: 5px;
@@ -355,129 +366,130 @@
     </ul>
 </nav>
 
-<section class="hero">
-    <img src="profile.jpg" alt="Profile Picture">
-    <h1>Mukti Katel</h1>
-    <h2>Application Support Specialist | ServiceNow Developer | QA Analyst</h2>
-    <p>
-        IT professional with 5+ years of experience supporting enterprise
-        applications, ServiceNow administration, automation, testing,
-        dashboard development, and business process improvements.
-    </p>
-<div class="buttons">
-    <a href="resume.docx" class="btn" download>
-        Download Resume
-    </a>
-
-    <a href="https://linkedin.com/in/muktikatel"
-       target="_blank"
-       class="btn secondary">
-        LinkedIn
-    </a>
-</div>
-</section>
-
-<section id="about" class="fade">
-    <h2 class="section-title">About Me</h2>
-    <div class="card">
+<main>
+    <section class="hero">
+        <img src="profile.jpg" alt="Mukti Katel Profile Picture">
+        <h1>Mukti Katel</h1>
+        <h2>Application Support Specialist | ServiceNow Developer | QA Analyst</h2>
         <p>
-            I am an Application Support Specialist and ServiceNow Developer
-            with experience maintaining enterprise applications, creating
-            automation solutions, troubleshooting issues, and supporting
-            operational teams.
-            <br><br>
-            My background includes ServiceNow development, dashboard
-            creation, QA testing, SNMP integrations, workflow automation,
-            and business process improvement.
+            IT professional with 5+ years of experience supporting enterprise
+            applications, ServiceNow administration, automation, testing,
+            dashboard development, and business process improvements.
         </p>
-    </div>
-</section>
-
-<section id="skills" class="fade">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills">
-        <div class="skill">ServiceNow</div>
-        <div class="skill">Java</div>
-        <div class="skill">PHP</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Python</div>
-        <div class="skill">SQL</div>
-        <div class="skill">HTML/CSS</div>
-        <div class="skill">Selenium</div>
-        <div class="skill">Postman</div>
-        <div class="skill">Git</div>
-        <div class="skill">Linux</div>
-        <div class="skill">Oracle</div>
-    </div>
-</section>
-
-<section id="experience" class="fade">
-    <h2 class="section-title">Professional Experience</h2>
-    <div class="timeline">
-        <div class="job">
-            <h3>Developer I - Mediacom</h3>
-            <span class="date">May 2023 – Aug 2025</span>
-            <ul>
-                <li>Sole administrator supporting multiple internal applications.</li>
-                <li>Developed ServiceNow business rules and workflow automation.</li>
-                <li>Created outage and change management dashboards.</li>
-                <li>Supported SNMP integrations and internal tools.</li>
-                <li>Provided application troubleshooting and user support.</li>
-            </ul>
+        <div class="buttons">
+            <a href="resume.pdf" class="btn" download="Mukti_Katel_Resume.pdf">
+                Download Resume
+            </a>
+            <a href="https://linkedin.com/in/muktikatel"
+               target="_blank"
+               rel="noopener noreferrer" 
+               class="btn secondary">
+                LinkedIn
+            </a>
         </div>
+    </section>
 
-        <div class="job">
-            <h3>Loan Documentation Specialist - Wells Fargo</h3>
-            <span class="date">Dec 2020 – May 2023</span>
-            <ul>
-                <li>Reviewed and processed loan documentation.</li>
-                <li>Ensured compliance and documentation accuracy.</li>
-            </ul>
+    <section id="about" class="fade">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p>
+                I am an Application Support Specialist and ServiceNow Developer
+                with experience maintaining enterprise applications, creating
+                automation solutions, troubleshooting issues, and supporting
+                operational teams.
+                <br><br>
+                My background includes ServiceNow development, dashboard
+                creation, QA testing, SNMP integrations, workflow automation,
+                and business process improvement.
+            </p>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="projects" class="fade">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects">
-        <div class="project">
-            <h3>Church Website</h3>
-            <p>Designed and developed a responsive church website using HTML, CSS and JavaScript.</p>
+    <section id="skills" class="fade">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills">
+            <div class="skill">ServiceNow</div>
+            <div class="skill">Java</div>
+            <div class="skill">PHP</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">HTML/CSS</div>
+            <div class="skill">Selenium</div>
+            <div class="skill">Postman</div>
+            <div class="skill">Git</div>
+            <div class="skill">Linux</div>
+            <div class="skill">Oracle</div>
         </div>
-        <div class="project">
-            <h3>Outage Dashboard</h3>
-            <p>Internal dashboard displaying network outages and operational status for users.</p>
-        </div>
-        <div class="project">
-            <h3>ServiceNow Automation</h3>
-            <p>Built workflow automations, business rules, ACLs and request fulfillment processes.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact" class="fade">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact">
-        <p><strong>Email:</strong> muktikatel@gmail.com</p>
-        <p><strong>Phone:</strong> (515) 639-1858</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/muktikatel</p>
-        <p><strong>Location:</strong> Ohio, United States</p>
-    </div>
-</section>
+    <section id="experience" class="fade">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+            <div class="job">
+                <h3>Developer I - Mediacom</h3>
+                <span class="date">May 2023 – Aug 2025</span>
+                <ul>
+                    <li>Sole administrator supporting multiple internal applications.</li>
+                    <li>Developed ServiceNow business rules and workflow automation.</li>
+                    <li>Created outage and change management dashboards.</li>
+                    <li>Supported SNMP integrations and internal tools.</li>
+                    <li>Provided application troubleshooting and user support.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Loan Documentation Specialist - Wells Fargo</h3>
+                <span class="date">Dec 2020 – May 2023</span>
+                <ul>
+                    <li>Reviewed and processed loan documentation.</li>
+                    <li>Ensured compliance and documentation accuracy.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Church Website</h3>
+                <p>Designed and developed a responsive church website using HTML, CSS and JavaScript.</p>
+            </div>
+            <div class="project">
+                <h3>Outage Dashboard</h3>
+                <p>Internal dashboard displaying network outages and operational status for users.</p>
+            </div>
+            <div class="project">
+                <h3>ServiceNow Automation</h3>
+                <p>Built workflow automations, business rules, ACLs and request fulfillment processes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact">
+            <p><strong>Email:</strong> <a href="mailto:muktikatel@gmail.com">muktikatel@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+15156391858">(515) 639-1858</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/muktikatel" target="_blank" rel="noopener noreferrer">linkedin.com/in/muktikatel</a></p>
+            <p><strong>Location:</strong> Ohio, United States</p>
+        </div>
+    </section>
+</main>
 
 <footer>
     <p>© 2026 Mukti Katel | Portfolio Website</p>
 </footer>
 
 <script>
-// Safely enable scroll animations only if JS loads perfectly
 document.documentElement.classList.add('js-enabled');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
             entry.target.classList.add("show");
-            observer.unobserve(entry.target); // Stops tracking once shown to save memory
+            observer.unobserve(entry.target); 
         }
     });
 }, { threshold: 0.15 });
