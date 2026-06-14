@@ -152,7 +152,7 @@
         .hero img {
             width: 140px;
             height: 140px;
-            border-radius: 30px; /* Modern squircle instead of basic circle */
+            border-radius: 30px;
             border: 2px solid var(--border);
             object-fit: cover;
             margin-bottom: 25px;
@@ -534,7 +534,6 @@
 </nav>
 
 <main>
-    <!-- HERO COMPONENT -->
     <section class="hero">
         <img src="profile.jpg" alt="Mukti Katel Portrait">
         <h1>Mukti Katel</h1>
@@ -545,7 +544,6 @@
             and automated workflow governance models.
         </p>
 
-        <!-- Dynamic High-Impact Metrics Layout -->
         <div class="hero-metrics">
             <div class="metric-card">
                 <span class="num">5+ Yrs</span>
@@ -567,7 +565,6 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section id="about">
         <h2 class="section-title">Operational Profile</h2>
         <div class="card">
@@ -581,7 +578,6 @@
         </div>
     </section>
 
-    <!-- CATEGORIZED SKILLS METRIC -->
     <section id="skills">
         <h2 class="section-title">Technical Expertise</h2>
         <div class="skills-container">
@@ -616,10 +612,26 @@
         </div>
     </section>
 
-    <!-- PROFESSIONAL TIMELINE -->
     <section id="experience">
         <h2 class="section-title">Professional History</h2>
         <div class="timeline">
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>Independent IT Consultant</h3>
+                        <p style="color: var(--text-secondary); font-weight: 500;">Freelance & Contract Projects</p>
+                    </div>
+                    <span class="date">Aug 2025 – Present</span>
+                </div>
+                <ul>
+                    <li>Architected and delivered responsive, full-stack web solutions for corporate, small business, and nonprofit stakeholders.</li>
+                    <li>Designed, developed, and deployed the <i>Ramro Home Care</i> infrastructure platform, implementing custom scheduling integrations and cross-platform UI layouts.</li>
+                    <li>Engineered a multi-page web framework for <i>New Bethel International Church</i> using clean semantic HTML, custom branding, and modern JavaScript modules.</li>
+                    <li>Orchestrated full-lifecycle deployment pipelines utilizing Git-based version control, custom DNS configurations, and optimized hosting infrastructure.</li>
+                    <li>Gathered complex business requirements from non-technical stakeholders to translate operational needs into scalable functional features.</li>
+                </ul>
+            </div>
+
             <div class="job">
                 <div class="job-header">
                     <div>
@@ -653,7 +665,6 @@
         </div>
     </section>
 
-    <!-- FEATURED PROJECTS MATRIX -->
     <section id="projects">
         <h2 class="section-title">Featured Engineering Projects</h2>
         <div class="projects-grid">
@@ -701,7 +712,6 @@
         </div>
     </section>
 
-    <!-- CONTACT CONTAINER -->
     <section id="contact">
         <h2 class="section-title">Secure Connection Terminal</h2>
         <div class="contact-wrapper">
@@ -775,7 +785,7 @@ async function updateLastDeployment() {
     }
 }
 
-/* ===== DYNAMIC VISUAL STATE MUTATION ENGINE (THEME SWTICH) ===== */
+/* ===== DYNAMIC VISUAL STATE MUTATION ENGINE (THEME SWITCH) ===== */
 const toggleBtn = document.getElementById("themeToggle");
 if (toggleBtn) {
     toggleBtn.addEventListener("click", () => {
