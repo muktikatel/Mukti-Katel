@@ -114,6 +114,34 @@
             color: var(--text-secondary);
         }
 
+        /* Live Status Widgets (Time & Weather) */
+        .live-status-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            max-width: 500px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .status-box {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .status-box b {
+            color: #93c5fd;
+        }
+
         .buttons {
             margin-top: 35px;
         }
@@ -288,7 +316,6 @@
             font-size: 1.05rem;
         }
 
-        /* Added interactive styling for contact links */
         .contact a {
             color: #cbd5e1;
             text-decoration: none;
@@ -350,6 +377,11 @@
             .hero h2 {
                 font-size: 1.15rem;
             }
+
+            .live-status-container {
+                grid-template-columns: 1fr;
+                max-width: 280px;
+            }
         }
     </style>
 </head>
@@ -376,6 +408,12 @@
             applications, ServiceNow administration, automation, testing,
             dashboard development, and business process improvements.
         </p>
+        
+        <div class="live-status-container">
+            <div id="timeBox" class="status-box">🕒 Loading Time...</div>
+            <div id="weatherBox" class="status-box">🌤 Loading Weather...</div>
+        </div>
+
         <div class="buttons">
             <a href="resume.pdf" class="btn" download="Mukti_Katel_Resume.pdf">
                 Download Resume
@@ -384,7 +422,7 @@
                target="_blank"
                rel="noopener noreferrer" 
                class="btn secondary">
-                LinkedIn
+                 LinkedIn
             </a>
         </div>
     </section>
@@ -485,11 +523,12 @@
 <script>
 document.documentElement.classList.add('js-enabled');
 
+/* ===== ANIMATION ===== */
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
             entry.target.classList.add("show");
-            observer.unobserve(entry.target); 
+            observer.unobserve(entry.target);
         }
     });
 }, { threshold: 0.15 });
@@ -497,6 +536,44 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".fade").forEach(el => {
     observer.observe(el);
 });
+
+/* ===== LIVE TIME (MIDDLETOWN OHIO) ===== */
+function updateTime() {
+    const time = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    }).format(new Date());
+
+    document.getElementById("timeBox").innerHTML =
+        `🕒 <b>Local Time:</b> ${time}`;
+}
+
+/* ===== LIVE WEATHER (FREE API) ===== */
+async function updateWeather() {
+    try {
+        const url = "https://api.open-meteo.com/v1/forecast?latitude=39.515&longitude=-84.398&current_weather=true";
+        const res = await fetch(url);
+        const data = await res.json();
+
+        const temp = data.current_weather.temperature;
+        const wind = data.current_weather.windspeed;
+
+        document.getElementById("weatherBox").innerHTML =
+            `🌤 <b>Weather:</b> ${temp}°C | 💨 ${wind} km/h`;
+    } catch (e) {
+        document.getElementById("weatherBox").innerHTML =
+            "Weather unavailable";
+    }
+}
+
+/* RUN */
+updateTime();
+updateWeather();
+
+setInterval(updateTime, 1000);
+setInterval(updateWeather, 600000);
 </script>
 
 </body>
